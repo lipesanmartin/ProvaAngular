@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaCatsComponentComponent } from './lista-cats-component/lista-cats-component.component';
 import { HttpClientModule } from '@angular/common/http'
-import { CatServiceService } from 'src/services/cat-service.service';
 import { CommonModule } from '@angular/common';
+import { CatService } from 'src/services/cat.service';
+import { ListCatsComponent } from './list-cats/list-cats.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaCatsComponentComponent
+    ListCatsComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +20,7 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     CommonModule
   ],
-  providers: [CatServiceService],
+  providers: [CatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,27 +2,28 @@
   <div class="row">
     <div class="col-md-12">
       <div class="inner">
-        <h3>Cats</h3>
+        <h1 class="text-center">List of Cats</h1>
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">Id</th>
               <th scope="col">Name</th>
               <th scope="col">Origin</th>
               <th scope="col">Temperament</th>
               <th scope="col">Colors</th>
               <th scope="col">Description</th>
+              <th scope="col">Image</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="cat of cats">
-              <!-- <th scope="row">{{cat.id}}</th> -->
+            <tr *ngFor="let cat of cats">
+              <th scope="row">{{cat.id}}</th>
               <td>{{cat.name}}</td>
               <td>{{cat.origin}}</td>
               <td>{{cat.temperament}}</td>
               <td>{{cat.colors}}</td>
               <td>{{cat.description}}</td>
-            </tr>
+              <td><img src="{{cat.image}}" alt="{{cat.name}}" style="height: 100px;"></td>
           </tbody>
         </table>
       </div>
